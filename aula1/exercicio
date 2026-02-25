@@ -1,0 +1,9 @@
+console.log("Meu primeiro programa");
+
+let euPrefiroJava = 41
+
+if (euPrefiroJava > 40){
+    console.log("eu sou centenário e gosto de Java")
+}else{
+    console("eu sou novinhooooo")
+}

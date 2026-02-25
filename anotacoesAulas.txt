@@ -1,0 +1,22 @@
+Cadeia de Caracteres - String
+
+Números - Number (inteiros e reais)
+
+Lógicos - Boolean
+
+palavras reservadas
+
+nomeclaturas corretas 
+
+variavéis: caixas vazias que armazenam dados COM ENDEREÇOS DE MEMORIA 
+
+LET = variavéis em JS 
+
+const = constante, não muda, PI 
+
+= atribuição
+
+== comparação 
+
+** exponenciação 
+----------------------------------------------
