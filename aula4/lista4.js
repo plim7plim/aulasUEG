@@ -24,5 +24,26 @@ console.log(valorArrecadado);
 
 //######################################################################################################################################    
 
-const custoLatinha = 155.0
+const aluminioLatinha = 155.0
 
+let alturaLata = Number(prompt("Qual a altura da lata em m? ")) ;
+let raioLata = Number(prompt("Qual o raio da lata em m ? ")) ;
+
+areaBase = Math.PI * (raioLata ** 2) *2;
+areaLado = 2 * Math.PI * raioLata * alturaLata
+
+let areaLata = areaBase + areaLado;
+
+precoLatinha = areaLata * aluminioLatinha;
+
+console.log (precoLatinha);
+
+//###################################################################################################################################################################
+
+let valorA = Number(prompt("de um valor pra A ")) ;
+let valorB = Number(prompt("de um valor pra B ")) ;
+
+let newValorA = valorB;
+let newValorB = valorA;
+
+console.log("Trocando os valores, A agora vale: " + newValorA + " e B agora vale :" + newValorB );
