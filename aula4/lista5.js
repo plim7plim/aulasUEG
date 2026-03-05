@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-/*
+
 
 let anos = Number(prompt("Quantos anos você tem?"));
 let meses = Number(prompt("Quantos meses você tem?"));
@@ -44,31 +44,48 @@ let lado1 = numero1 ** 2 - numero2 ** 2;
 let lado2 = 2 * numero1 * numero2;
 let hipotenusa = numero1 ** 2 + numero2 ** 2;
 
-console.log("Lado 1: " + lado1 + " Lado 2: " + lado2 + " Hipotenusa: " + hipotenusa); */
+console.log("Lado 1: " + lado1 + " Lado 2: " + lado2 + " Hipotenusa: " + hipotenusa);
 
 //###################################################################################################################################################################//###################################################################################################################################################################
+let numeroSeparado = Number(prompt("Escolha um número entre 100 e 999:"));
 
-let contaCorrente = Number(prompt("Digite os três digitos de sua conta corrente ! "));
+// separar os dígitos
+let centena = Math.floor(numeroSeparado / 100);
+let resto = numeroSeparado % 100;
+let dezena = Math.floor(resto / 10);
+let unidade = resto % 10;
 
-let inversorContaCentena = Math.floor(contaCorrente / 100);
-let restoContaDezena = contaCorrente % 100;
-let inversorContaDezena = Math.floor(restoContaDezena / 10);
-let inversorContaUnidade = restoContaDezena % 10;
+console.log("Centena:", centena);
+console.log("Dezena:", dezena);
+console.log("Unidade:", unidade);
 
-let numeroInvertidoConta = inversorContaUnidade.toString() + inversorContaDezena.toString() + inversorContaCentena.toString();
-numeroInvertidoConta = Number(numeroInvertidoConta);
+// inverter o número
+let numeroInvertido = Number(unidade.toString() + dezena.toString() + centena.toString());
 
-console.log(numeroInvertidoConta);
+console.log("Número invertido:", numeroInvertido);
 
-let somaNumeros = contaCorrente + numeroInvertidoConta;
-console.log(somaNumeros);
+// somar os números
+let soma = numeroSeparado + numeroInvertido;
 
-let centenaSoma = Math.floor(somaNumeros / 100);
-let restoSoma = somaNumeros % 100;
+console.log("Soma:", soma);
+
+// separar os dígitos da soma
+let centenaSoma = Math.floor(soma / 100);
+let restoSoma = soma % 100;
 let dezenaSoma = Math.floor(restoSoma / 10);
 let unidadeSoma = restoSoma % 10;
 
-let somaPosicional = centenaSoma * 1 + dezenaSoma * 2 + unidadeSoma * 3; // 7 + 12 + 21 = 40
-let digitoVerificador = somaPosicional % 10; // 40 % 10 = 0
+// multiplicação posicional
+let mult1 = centenaSoma * 1;
+let mult2 = dezenaSoma * 2;
+let mult3 = unidadeSoma * 3;
 
-console.log(digitoVerificador);
+let somaPosicional = mult1 + mult2 + mult3;
+
+console.log("Multiplicações:", mult1, mult2, mult3);
+console.log("Soma posicional:", somaPosicional);
+
+// dígito verificador
+let digitoVerificador = somaPosicional % 10;
+
+console.log("Dígito verificador:", digitoVerificador);
