@@ -2,6 +2,7 @@ const prompt = require("prompt-sync")();
 
 
 
+//######################################################
 let anos = Number(prompt("Quantos anos você tem?"));
 let meses = Number(prompt("Quantos meses você tem?"));
 let dias = Number(prompt("Quantos dias você tem?"));

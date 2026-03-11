@@ -91,11 +91,11 @@ console.log("Notas de 1:", dinheiro1);
 
 //###############################################################################################################################################################################
 let IPI = Number(prompt("Qual o valor do IPI? "));
-let codigo1 = Number(prompt("Qual o codigo da peça 1? "));
+
 let valor1 = Number(prompt("Qual o valor da peça 1? "));
 let quantidade1 = Number(prompt("Quantas peças 1? "));
 
-let codigo2 = Number(prompt("Qual o codigo da peça 2? "));
+
 let valor2 = Number(prompt("Qual o valor da peça 2? "));
 let quantidade2 = Number(prompt("Quantas peças 2? "));
 
