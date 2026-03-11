@@ -31,6 +31,7 @@ let saberSalarioTotal = salarioTotal(televisoesLCD,televisoesLED,televisoesPlasm
 console.log(saberSalarioTotal);
 
 //#############################################################################################################
+
 let aplicacaoMensal = Number(prompt("Digite o valor da aplicação mensal: "));
 let taxa = Number(prompt("Digite o valor da taxa (%): ")) / 100; //esse lixo aqui tem q ir pra decimal 
 let numeroMeses = Number(prompt("Digite o numero de meses: "));
@@ -41,3 +42,16 @@ function aplicacaoProgramada2 (aplicacaoMensal, taxa, numeroMeses){
 }
 let saberTaxa = aplicacaoProgramada2(aplicacaoMensal, taxa, numeroMeses);
 console.log(saberTaxa);
+
+//#############################################################################################################
+let prestacaoAtrasada = Number(prompt("Digite o valor da prestacao "));
+let juros = Number(prompt("Digite o valor da prestacao % ")) / 100; //esse lixo foi pra decimal dnv 
+let tempoAtraso = Number(prompt("o tempo atrasado "));
+
+function valorPrestacaoAtrasada (prestacaoAtrasada, juros, tempoAtraso){
+    let calcularValorPrestacaoAtrasada = prestacaoAtrasada * (1 + juros * tempoAtraso);
+    return calcularValorPrestacaoAtrasada;
+}
+
+let saberValorPrestacaoAtrasada = valorPrestacaoAtrasada(prestacaoAtrasada, juros, tempoAtraso);
+console.log(saberValorPrestacaoAtrasada);   
