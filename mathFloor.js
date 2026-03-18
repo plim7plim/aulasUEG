@@ -71,3 +71,26 @@ function embalarGarrafas(totalDeAgua){
 
 let newGarrafa = embalarGarrafas(totalDeAgua);
 console.log(newGarrafa);
+
+//##########################################################################################
+
+let notas = Number(prompt("Qual o valor?"));
+
+function  sacarNotas(notas){
+    let notas100 = Math.floor(notas /100);
+    let sobra100 = notas % 100;
+
+    let  notas50 = Math.floor(sobra100/50);
+    let sobra50 = sobra100 % 50;
+
+    let notas20 = Math.floor(sobra50/20);
+    let sobra20 = sobra50 % 20;
+    
+    let notas10 = Math.floor(sobra20/10);
+
+    console.log("Notas de 100 : " + notas100 + " notas de 50: " + notas50 + " notas de 20 " + notas20 + " notas de 10: " + notas10)
+
+}
+
+let fimSacarNotas = sacarNotas(notas);
+console.log(fimSacarNotas);

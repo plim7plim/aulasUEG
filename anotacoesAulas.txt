@@ -57,3 +57,4 @@ function separarDinheiro(dinheiro){
     console.log("Notas de 5:", dinheiro5);
     console.log("Notas de 1:", dinheiro1);
 }
+
