@@ -104,7 +104,7 @@ function digitoConfirmar(numeroSeparado){
     console.log("Soma posicional:", somaPosicional);
 
     // dígito verificador
-    let digitoVerificador = somaPosicional % 10;
+    let digitoVerifi954cador = somaPosicional % 10;
     
     return digitoVerificador;
 }
