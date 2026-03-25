@@ -185,3 +185,33 @@ function calculoDePreco(precoEtiqueta){
     }
 }
 calculoDePreco(precoEtiqueta,codigo);
+
+//############################################################################################################}
+
+let combustivel = Number(prompt("Qual o codigo do combustivel? "));
+let valor = Number(prompt("Quanto em reais? "));
+
+function calculoDeCombustivel(combustivel, valor) {
+    let tipo = "";
+    let litros = 0;
+
+    if (combustivel == 1) {
+        tipo = "Álcool";
+        litros = valor / 4.805;
+    }
+
+    if (combustivel == 2) {
+        tipo = "Diesel";
+        litros = valor / 5.953;
+    }
+
+    if (combustivel == 3) {
+        tipo = "Gasolina";
+        litros = valor / 6.565;
+    }
+
+    console.log("Combustível: " + tipo);
+    console.log("Litros abastecidos: " + litros.toFixed(2));
+}
+
+calculoDeCombustivel(combustivel, valor);
