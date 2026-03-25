@@ -3,7 +3,7 @@
 const prompt = require("prompt-sync")();
 
 
-/* let digiteNumero = Number(prompt("Digite um numero pae! "));
+ let digiteNumero = Number(prompt("Digite um numero pae! "));
 
 function calcularNumero(digiteNumero){
     if(digiteNumero%2 !== 0){
@@ -68,7 +68,7 @@ function quebrarNumero (quebraNumero){
 }
 
 let newQuebraNumero = quebrarNumero(quebraNumero);
-console.log(newQuebraNumero); */
+console.log(newQuebraNumero); 
 
 //############################################################################################################
 
@@ -86,3 +86,102 @@ function eleitorUrna (eleitor){
 
 let boraVotar = eleitorUrna(eleitor);
 console.log(boraVotar);
+
+//############################################################################################################
+
+let coeficienteA = Number(prompt("qual valor de A?"));
+let coeficienteB = Number(prompt("qual valor de B?"));
+let coeficienteC =  Number(prompt("qual valor de C?"));
+
+function calculoDelta(coeficienteA, coeficienteB, coeficienteC){
+    let delta = coeficienteB ** 2 - 4 * coeficienteA * coeficienteC;
+
+    if(delta<0){
+        console.log("Possuí uma raiz imaginária")
+    }if(delta == 0){
+        console.log("Raiz unica")
+    }if(delta > 0){
+        console.log("Raizer distintas")
+    }
+
+}
+
+let newCalculoDelta= calculoDelta(coeficienteA,coeficienteB,coeficienteC);
+console.log(newCalculoDelta);
+
+//############################################################################################################
+
+let nomeA = prompt("Qual seu nome?");
+let numeroConta = Number(prompt("Qual número da sua conta?"));
+let saldo = Number(prompt("Qual o saldo semestral da conta?"));
+
+function definirSaldo(nomeA, numeroConta, saldo) {
+    let mediaMensal = saldo / 6;
+    let tarifa = 0;
+    let tipo = "";
+
+    if (mediaMensal < 1000) {
+        tarifa = 25;
+        tipo = "Básica";
+    }
+
+    if (mediaMensal >= 1000 && mediaMensal <= 2000) {
+        tarifa = 20;
+        tipo = "Prata";
+    }
+
+    if (mediaMensal > 2000 && mediaMensal <= 3500) {
+        tarifa = 13;
+        tipo = "Ouro";
+    }
+
+    if (mediaMensal > 3500) {
+        tarifa = 0;
+        tipo = "Prêmio (Isento)";
+    }
+
+    console.log("Olá, " + nomeA);
+    console.log("Conta: " + numeroConta);
+    console.log("Saldo médio mensal: R$ " + mediaMensal.toFixed(2));
+    console.log("Categoria: " + tipo);
+    console.log("Tarifa: R$ " + tarifa);
+}
+
+definirSaldo(nomeA, numeroConta, saldo);
+
+//############################################################################################################
+let precoEtiqueta = Number(prompt("Qual o preço? "));
+let codigo = Number(prompt("Qual o codigo da operação? "));
+
+function calculoDePreco(precoEtiqueta){
+
+    let tipo = "";
+
+    if (codigo == 1){
+        precoEtiqueta = precoEtiqueta * 0.9;
+        tipo = "À vista, dinheiro ou cheque";
+        console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
+    }
+
+    if (codigo == 2){
+        precoEtiqueta = precoEtiqueta * 0.95;
+        tipo = "À vista no cartão";
+        console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
+    }
+
+    if (codigo == 3){
+        tipo = "2 vezes sem juros";
+        let precoDividido = precoEtiqueta / 2;
+        console.log("Total: R$ " + precoEtiqueta.toFixed(2) + " | 2x de: R$ " + precoDividido.toFixed(2));
+    }
+
+    if (codigo == 4){
+        tipo = "3 vezes com 10% de juros";
+        let juros = precoEtiqueta * 0.1;
+        let total = precoEtiqueta + juros;
+        let precoDividido = total / 3;
+
+        console.log("Total com juros: R$ " + total.toFixed(2) + " | 3x de: R$ " + precoDividido.toFixed(2));
+    }
+}
+calculoDePreco(precoEtiqueta,codigo);
