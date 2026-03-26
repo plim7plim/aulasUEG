@@ -22,7 +22,7 @@ console.log(chamarNumero)
 let salarioo = Number(prompt("Digite seu salário!"));
 
 function reajuste(salarioo){
-    if(salarioo < 1412){
+    if(salarioo <= 1412){
         let salarioMenor = Number (salarioo * 0.5 + salarioo);
         console.log(salarioMenor);
         return salarioMenor.toFixed(2);
