@@ -1,5 +1,5 @@
 const prompt = require("prompt-sync")();
-/*
+
 let digiteNumero = Number(prompt("Digite um numero pae! "));
 
 function calculoPerfeito (digiteNumero){
@@ -36,7 +36,7 @@ function calculoCompleto(ar,pintura,vidro, direcao){
 }
 
 let newPrecoFinal = calculoCompleto(ar,pintura,vidro, direcao);
-console.log(newPrecoFinal);*/
+console.log(newPrecoFinal);
 
 
 //##################################################
