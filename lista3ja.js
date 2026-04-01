@@ -13,17 +13,17 @@ function calculoGota(idade){
         dosagemMg = 600;
     }
 
-    if (idade == 2){
+    else if (idade == 2){
         tipo = "adolescente";
         dosagemMg = 1600;
     }
 
-    if (idade == 3){
+    else if (idade == 3){
         tipo = "Adulto";
         dosagemMg = 4600;
     }
 
-    if (idade == 4){
+    else if (idade == 4){
         tipo = "Idoso";
         dosagemMg = 2450;
     }
@@ -55,11 +55,11 @@ function calculoAgua(tipoConsumidor,conta, m3){
         taxaDoAmor = 5;
         gastoFinal = m3*0.55 + taxaDoAmor;
     }
-    if (tipoConsumidor == "C"){
+    else if (tipoConsumidor == "C"){
         taxaDoAmor = 150;
         gastoFinal = m3 * 1.25 + taxaDoAmor;
     }
-    if (tipoConsumidor == "I"){
+    else if (tipoConsumidor == "I"){
         taxaDoAmor = 280;
         gastoFinal = m3 * 2.54 + taxaDoAmor;
     }
@@ -83,7 +83,7 @@ function temDesconto(diaSemana){
         desconto = 0.4;
     }
 
-    if (diaSemana == 1 || diaSemana == 4 || diaSemana == 6 || diaSemana == 7){
+    else if (diaSemana == 1 || diaSemana == 4 || diaSemana == 6 || diaSemana == 7){
         desconto = 0;
     }
 
@@ -102,7 +102,7 @@ function calcularFilme(tipoFilme, valorFilme, diaSemana){
         valorFinal = valorFinal * 1.15;
     }
 
-    if (tipoFilme == "N"){
+    else if (tipoFilme == "N"){
         valorFinal = valorFinal;
     }
 
@@ -127,15 +127,15 @@ function precoFim(nome, tipoPulverizacao, acres) {
         precoPorAcre = 50;
     }
 
-    if (tipoPulverizacao == 2) {
+    else if (tipoPulverizacao == 2) {
         precoPorAcre = 100;
     }
 
-    if (tipoPulverizacao == 3) {
+    else if (tipoPulverizacao == 3) {
         precoPorAcre = 150;
     }
 
-    if (tipoPulverizacao == 4) {
+    else if (tipoPulverizacao == 4) {
         precoPorAcre = 250;
     }
     precoFinal = precoPorAcre * acres;
@@ -174,11 +174,11 @@ function somaTresMenores(n1, n2, n3, n4) {
         maior = n2;
     }
 
-    if (n3 > maior) {
+    else if (n3 > maior) {
         maior = n3;
     }
 
-    if (n4 > maior) {
+    else if (n4 > maior) {
         maior = n4;
     }
 

@@ -125,17 +125,17 @@ function definirSaldo(nomeA, numeroConta, saldo) {
         tipo = "Básica";
     }
 
-    if (mediaMensal >= 1000 && mediaMensal <= 2000) {
+    else if (mediaMensal >= 1000 && mediaMensal <= 2000) {
         tarifa = 20;
         tipo = "Prata";
     }
 
-    if (mediaMensal > 2000 && mediaMensal <= 3500) {
+    else if (mediaMensal > 2000 && mediaMensal <= 3500) {
         tarifa = 13;
         tipo = "Ouro";
     }
 
-    if (mediaMensal > 3500) {
+    else if (mediaMensal > 3500) {
         tarifa = 0;
         tipo = "Prêmio (Isento)";
     }
@@ -163,19 +163,19 @@ function calculoDePreco(precoEtiqueta){
         console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
     }
 
-    if (codigo == 2){
+    else if (codigo == 2){
         precoEtiqueta = precoEtiqueta * 0.95;
         tipo = "À vista no cartão";
         console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
     }
 
-    if (codigo == 3){
+    else if(codigo == 3){
         tipo = "2 vezes sem juros";
         let precoDividido = precoEtiqueta / 2;
         console.log("Total: R$ " + precoEtiqueta.toFixed(2) + " | 2x de: R$ " + precoDividido.toFixed(2));
     }
 
-    if (codigo == 4){
+    else if (codigo == 4){
         tipo = "3 vezes com 10% de juros";
         let juros = precoEtiqueta * 0.1;
         let total = precoEtiqueta + juros;
@@ -200,12 +200,12 @@ function calculoDeCombustivel(combustivel, valor) {
         litros = valor / 4.805;
     }
 
-    if (combustivel == 2) {
+    else if (combustivel == 2) {
         tipo = "Diesel";
         litros = valor / 5.953;
     }
 
-    if (combustivel == 3) {
+    else if (combustivel == 3) {
         tipo = "Gasolina";
         litros = valor / 6.565;
     }

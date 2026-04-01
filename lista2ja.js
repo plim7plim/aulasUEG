@@ -25,11 +25,11 @@ function calculoCompleto(ar,pintura,vidro, direcao){
     let precoFinal = precoFabrica;
     if(ar == "S" ){
         precoFinal = precoFabrica + 1750;
-    }if (pintura == "S"){
+    }else if (pintura == "S"){
         precoFinal = precoFabrica + 800;
-    }if (vidro == "S"){
+    }else if (vidro == "S"){
         precoFinal = precoFabrica + 1200;
-    }if (direcao == "S"){
+    }else if (direcao == "S"){
         precoFinal = precoFabrica + 2000;
     }
     console.log(precoFinal.toFixed(2));
@@ -50,7 +50,7 @@ function verificaTriangulo(a, b, c) {
         return "Não forma triângulo";
     }else{console.log("Válido")}
 
-    if (a === b && b === c) {
+    if (a === b && b === c) { //consequentemente A é igual a C
         return "Equilátero";
     } else if (a === b || a === c || b === c) {
         return "Isósceles";
@@ -72,13 +72,13 @@ function conversao(quantosDinheiros){
     if(opcao == 1){
        let euro = quantosDinheiros / 5.418
         console.log("A opção selecionada foi Euro; seus " + quantosDinheiros + " viraram: " +euro.toFixed(2));
-    }if (opcao == 2){
+    }else if (opcao == 2){
         let libra = quantosDinheiros / 6.336 
         console.log("A opção selecionada foi libras; seus " + quantosDinheiros + " viraram: " +libra.toFixed(2));
-    }if (opcao == 3){
+    }else if (opcao == 3){
         let dolar = quantosDinheiros / 5.189
         console.log("A opção selecionada foi dolar; seus " + quantosDinheiros + " viraram: " +dolar.toFixed(2));
-    }if (opcao >3){
+    }else if (opcao >3){
         console.log("operacao inválida")
     }
 }
@@ -97,7 +97,7 @@ function calculoPesoIdeal(altura,sexo){
     if (sexo == "H"){
         let pesoHome =  72.7 * altura - 58;
         console.log("Peso ideal: " + pesoHome.toFixed(2));
-    }  if (sexo == "M"){
+    } if (sexo == "M"){
         let pesoMuie =  62.1 * altura - 44.7;
         console.log("Peso ideal: " + pesoMuie.toFixed(2));
     }
