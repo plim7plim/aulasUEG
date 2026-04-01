@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-/*
+
 let numero1 = Number(prompt("Digite um numero pae! "));
 let numero2 = Number(prompt("Digite um de novo numero pae! "));
 
@@ -25,8 +25,7 @@ function calculadora (numero1, numero2,operacaoo){
 }
 
 let chamarCalculado = calculadora(numero1, numero2, operacaoo);
-console.log(chamarCalculado); */
-
+console.log(chamarCalculado); 
 
 //---------------------------------------------------------------------------------------------------------
 
@@ -69,3 +68,5 @@ function calculoImc (pesoKG,alturaMetro){
 }       
 let calculoIMCC = calculoImc(pesoKG,alturaMetro)
 console.log(calculoIMCC);
+
+//--------------------------------------------------------------------------------------------
