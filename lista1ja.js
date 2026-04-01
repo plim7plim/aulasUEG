@@ -2,15 +2,15 @@
 
 const prompt = require("prompt-sync")();
 
-
- let digiteNumero = Number(prompt("Digite um numero pae! "));
+//CONFORME 
+let digiteNumero = Number(prompt("Digite um numero pae! "));
 
 function calcularNumero(digiteNumero){
     if(digiteNumero%2 !== 0){
         console.log("impar");
     } else{
         console.log("par");
-    }
+    } 
 }
 
 let chamarNumero = calcularNumero(digiteNumero);
@@ -19,6 +19,7 @@ console.log(chamarNumero)
 
 //############################################################################################################
 
+//CONFORME
 let salarioo = Number(prompt("Digite seu salário!"));
 
 function reajuste(salarioo){
@@ -40,6 +41,7 @@ console.log(saberReajuste)
 //############################################################################################################
 let quebraNumero = Number(prompt("Digite um numero de 1000 a 9999! "));
 
+//CONFORME
 function quebrarNumero (quebraNumero){
     let milhar = Math.floor(quebraNumero/1000).toString();
     let sobraMilhar = quebraNumero % 1000;
@@ -74,10 +76,11 @@ console.log(newQuebraNumero);
 
 let eleitor = Number(prompt("qual sua idade?"))
 
+//TEM Q AJUSTAR 
 function eleitorUrna (eleitor){
     if(eleitor >17 || eleitor <66){
         console.log("Obrigatório")
-    }if(eleitor << 16){
+    }else if (eleitor << 16){
         console.log("Não pode")
     }if(eleitor >15 && eleitor <18 ||eleitor >65 ){
         console.log("Se quiser sim")
@@ -96,11 +99,12 @@ let coeficienteC =  Number(prompt("qual valor de C?"));
 function calculoDelta(coeficienteA, coeficienteB, coeficienteC){
     let delta = coeficienteB ** 2 - 4 * coeficienteA * coeficienteC;
 
+//CONFORME
     if(delta<0){
         console.log("Possuí uma raiz imaginária")
-    }if(delta == 0){
+    }else if(delta == 0){
         console.log("Raiz unica")
-    }if(delta > 0){
+    }else{
         console.log("Raizer distintas")
     }
 
@@ -123,19 +127,13 @@ function definirSaldo(nomeA, numeroConta, saldo) {
     if (mediaMensal < 1000) {
         tarifa = 25;
         tipo = "Básica";
-    }
-
-    else if (mediaMensal >= 1000 && mediaMensal <= 2000) {
+    } else if (mediaMensal <= 2000) {
         tarifa = 20;
         tipo = "Prata";
-    }
-
-    else if (mediaMensal > 2000 && mediaMensal <= 3500) {
+    } else if (mediaMensal <= 3500) {
         tarifa = 13;
         tipo = "Ouro";
-    }
-
-    else if (mediaMensal > 3500) {
+    } else {
         tarifa = 0;
         tipo = "Prêmio (Isento)";
     }
@@ -148,66 +146,75 @@ function definirSaldo(nomeA, numeroConta, saldo) {
 }
 
 definirSaldo(nomeA, numeroConta, saldo);
-
 //############################################################################################################
 let precoEtiqueta = Number(prompt("Qual o preço? "));
-let codigo = Number(prompt("Qual o codigo da operação? "));
+let codigo = Number(prompt("Qual o código da operação? "));
 
-function calculoDePreco(precoEtiqueta){
-
+function calculoDePreco(precoEtiqueta, codigo) {
     let tipo = "";
 
-    if (codigo == 1){
-        precoEtiqueta = precoEtiqueta * 0.9;
-        tipo = "À vista, dinheiro ou cheque";
-        console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
-    }
+    switch (codigo) {
+        case 1:
+            precoEtiqueta = precoEtiqueta * 0.90;
+            tipo = "À vista, dinheiro ou cheque";
+            console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
+            break;
 
-    else if (codigo == 2){
-        precoEtiqueta = precoEtiqueta * 0.95;
-        tipo = "À vista no cartão";
-        console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
-    }
+        case 2:
+            precoEtiqueta = precoEtiqueta * 0.95;
+            tipo = "À vista no cartão";
+            console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2));
+            break;
 
-    else if(codigo == 3){
-        tipo = "2 vezes sem juros";
-        let precoDividido = precoEtiqueta / 2;
-        console.log("Total: R$ " + precoEtiqueta.toFixed(2) + " | 2x de: R$ " + precoDividido.toFixed(2));
-    }
+        case 3:
+            tipo = "2 vezes sem juros";
+            let precoDividido2 = precoEtiqueta / 2;
+            console.log(tipo + " - Total: R$ " + precoEtiqueta.toFixed(2) + " | 2x de: R$ " + precoDividido2.toFixed(2));
+            break;
 
-    else if (codigo == 4){
-        tipo = "3 vezes com 10% de juros";
-        let juros = precoEtiqueta * 0.1;
-        let total = precoEtiqueta + juros;
-        let precoDividido = total / 3;
+        case 4:
+            tipo = "3 vezes com 10% de juros";
+            let total = precoEtiqueta * 1.10;
+            let precoDividido3 = total / 3;
+            console.log(tipo + " - Total com juros: R$ " + total.toFixed(2) + " | 3x de: R$ " + precoDividido3.toFixed(2));
+            break;
 
-        console.log("Total com juros: R$ " + total.toFixed(2) + " | 3x de: R$ " + precoDividido.toFixed(2));
+        default:
+            console.log("Código inválido.");
     }
 }
-calculoDePreco(precoEtiqueta,codigo);
+
+calculoDePreco(precoEtiqueta, codigo);
+
 
 //############################################################################################################}
 
-let combustivel = Number(prompt("Qual o codigo do combustivel? "));
+let combustivel = Number(prompt("Qual o código do combustível? "));
 let valor = Number(prompt("Quanto em reais? "));
 
 function calculoDeCombustivel(combustivel, valor) {
     let tipo = "";
     let litros = 0;
 
-    if (combustivel == 1) {
-        tipo = "Álcool";
-        litros = valor / 4.805;
-    }
+    switch (combustivel) {
+        case 1:
+            tipo = "Álcool";
+            litros = valor / 4.805;
+            break;
 
-    else if (combustivel == 2) {
-        tipo = "Diesel";
-        litros = valor / 5.953;
-    }
+        case 2:
+            tipo = "Diesel";
+            litros = valor / 5.953;
+            break;
 
-    else if (combustivel == 3) {
-        tipo = "Gasolina";
-        litros = valor / 6.565;
+        case 3:
+            tipo = "Gasolina";
+            litros = valor / 6.565;
+            break;
+
+        default:
+            tipo = "Código inválido";
+            litros = 0;
     }
 
     console.log("Combustível: " + tipo);

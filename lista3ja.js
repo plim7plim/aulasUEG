@@ -1,31 +1,37 @@
-const prompt = require("prompt-sync")();    
+const prompt = require("prompt-sync")();
 
 let idade = Number(prompt("1,2,3 ou 4? "));
 
-function calculoGota(idade){
+function calculoGota(idade) {
     let tipo = "";
     let dosagemMg = 0;
     let ml = 0;
     let gotas = 0;
 
-    if (idade == 1) {
-        tipo = "Bebê";
-        dosagemMg = 600;
-    }
+    switch (idade) {
+        case 1:
+            tipo = "Bebê";
+            dosagemMg = 600;
+            break;
 
-    else if (idade == 2){
-        tipo = "adolescente";
-        dosagemMg = 1600;
-    }
+        case 2:
+            tipo = "Adolescente";
+            dosagemMg = 1600;
+            break;
 
-    else if (idade == 3){
-        tipo = "Adulto";
-        dosagemMg = 4600;
-    }
+        case 3:
+            tipo = "Adulto";
+            dosagemMg = 4600;
+            break;
 
-    else if (idade == 4){
-        tipo = "Idoso";
-        dosagemMg = 2450;
+        case 4:
+            tipo = "Idoso";
+            dosagemMg = 2450;
+            break;
+
+        default:
+            console.log("Opção inválida!");
+            return;
     }
 
     ml = dosagemMg / 400;
@@ -39,7 +45,6 @@ function calculoGota(idade){
 }
 
 calculoGota(idade);
-
 
 //##############################
 

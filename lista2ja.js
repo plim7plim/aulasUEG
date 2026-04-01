@@ -34,7 +34,7 @@ function calculoCompleto(ar,pintura,vidro, direcao){
     }
     console.log(precoFinal.toFixed(2));
 }
-
+//switch n funfa 
 let newPrecoFinal = calculoCompleto(ar,pintura,vidro, direcao);
 console.log(newPrecoFinal);
 
@@ -57,7 +57,7 @@ function verificaTriangulo(a, b, c) {
     } else {
         return "Escaleno";
     }
-}
+} //OK 
 
 let newTriangulo = verificaTriangulo(a, b, c);
 console.log(newTriangulo);
@@ -69,22 +69,26 @@ let quantosDinheiros = Number(prompt("Quantos reais você tem? "));
 let opcao = Number(prompt("Qual a opção? "));
 
 function conversao(quantosDinheiros){
-    if(opcao == 1){
-       let euro = quantosDinheiros / 5.418
+    switch(opcao){
+        case 1 :
+        let euro = quantosDinheiros / 5.418
         console.log("A opção selecionada foi Euro; seus " + quantosDinheiros + " viraram: " +euro.toFixed(2));
-    }else if (opcao == 2){
+        break;
+        case 2 :
         let libra = quantosDinheiros / 6.336 
         console.log("A opção selecionada foi libras; seus " + quantosDinheiros + " viraram: " +libra.toFixed(2));
-    }else if (opcao == 3){
+        break;
+        case 3 :
         let dolar = quantosDinheiros / 5.189
         console.log("A opção selecionada foi dolar; seus " + quantosDinheiros + " viraram: " +dolar.toFixed(2));
-    }else if (opcao >3){
-        console.log("operacao inválida")
+        break;
+        default: 
+         console.log("operacao inválida")
+    
     }
 }
 
-let newConversao = conversao(quantosDinheiros, opcao);
-console.log(newConversao);
+conversao(quantosDinheiros, opcao);
 
 //##################################################
 
@@ -97,11 +101,12 @@ function calculoPesoIdeal(altura,sexo){
     if (sexo == "H"){
         let pesoHome =  72.7 * altura - 58;
         console.log("Peso ideal: " + pesoHome.toFixed(2));
-    } if (sexo == "M"){
+    } else if (sexo == "M"){
         let pesoMuie =  62.1 * altura - 44.7;
         console.log("Peso ideal: " + pesoMuie.toFixed(2));
+    }else{
+        console.log("Entrada inválida!")
     }
 }
-
-let newPesinho = calculoPesoIdeal(altura,sexo);
-console.log(newPesinho);
+calculoPesoIdeal(altura,sexo);
+// n precisa, tres valores exatos 
