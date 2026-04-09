@@ -1,0 +1,60 @@
+Cadeia de Caracteres - String
+
+Números - Number (inteiros e reais)
+
+Lógicos - Boolean
+
+palavras reservadas
+
+nomeclaturas corretas 
+
+variavéis: caixas vazias que armazenam dados COM ENDEREÇOS DE MEMORIA 
+
+LET = variavéis em JS 
+
+const = constante, não muda, PI 
+
+= atribuição
+
+== comparação 
+
+** exponenciação 
+----------------------------------------------
+
+anotações importante pra prova de amanhã: 
+
+
+const prompt = require("prompt-sync")(); -> cria o scanner 
+
+let nomeVariavel = prompt("") -> o que vai ser feito de pergunta / prompt é a palavra chave do contrário não vai funcionar
+
+
+let nomeVariavel = Number(prompt()); -> converte o texto em digitado para Numero 
+
+math.floor -> divisão de resto *VAI CAIR GARANTIDO* :::
+
+
+funcão recebe o parametro dinheiro
+
+function separarDinheiro(dinheiro){
+    let dinheiro100 = Math.floor(dinheiro / 100); -> divide por 100 e pega apenas a parte inteira (quantidade de notas de 100)
+    let sobraDinheiro100 = dinheiro % 100; -> pega oq sobra 
+
+    let dinheiro50 = Math.floor(sobraDinheiro100 / 50); -> pega oq sobrou de 100 e divide por 50, formando blocos inteiros 
+    let sobraDinheiro50 = sobraDinheiro100 % 50; pega oq sobra de 50 e passa pra proxima variável 
+
+    let dinheiro10 = Math.floor(sobraDinheiro50 / 10); -> pega oq sobrou de 50  e divide por 10, forma blocos inteiros
+    let sobraDinheiro10 = sobraDinheiro50 % 10; -> oq sobra de 10
+
+    let dinheiro5 = Math.floor(sobraDinheiro10 / 5); -> pega oq sobrou de 10 e divide por 5 blocos inteiros apenas 
+    let sobraDinheiro5 = sobraDinheiro10 % 5; -> oq sobra de 5
+
+    let dinheiro1 = sobraDinheiro5; -> converte o quociente de 5 em numeros 1 agora e finaliza 
+
+    console.log("Notas de 100:", dinheiro100);
+    console.log("Notas de 50:", dinheiro50);
+    console.log("Notas de 10:", dinheiro10);
+    console.log("Notas de 5:", dinheiro5);
+    console.log("Notas de 1:", dinheiro1);
+}
+-------------------------------------------------------------
