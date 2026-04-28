@@ -70,10 +70,10 @@ let y = Number(prompt("Qual o valor de y? "));
 function cartesiano(x,y){
     if (x==0 && y==0){
         console.log("X e Y estão em 0, o que nos leva ao ponto central")
-    }else if(y == 0){
-        console.log("Y está em 0")
-    }else if (x == 0) {
-        console.log("X está em 0")
+    }else if(x == 0){
+        console.log("Eixo X")
+    }else if (y == 0) {
+        console.log("Eixo Y")
     }else{
         console.log("Nem X nem Y estão em 0")
     }
