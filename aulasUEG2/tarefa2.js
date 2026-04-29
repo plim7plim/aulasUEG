@@ -37,4 +37,20 @@ calcular();
 
 
 //####################################################
-let = Number(prompt("Escolha um angulo "));
+function calcularSeno() {
+    let A, seno;
+
+    console.log("A (rad)\tSen(A)");
+    console.log("----------------------");
+
+    for (A = 0.0; A <= 3.3; A += 0.3) {
+        seno = A
+             - (A ** 3) / 6
+             + (A ** 5) / 120
+             - (A ** 7) / 5040;
+
+        console.log(A.toFixed(1) + "\t" + seno.toFixed(6));
+    }
+}
+
+calcularSeno();
