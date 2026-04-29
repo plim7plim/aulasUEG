@@ -1,0 +1,6 @@
+//optei por usar funções vazias nos exercicios e perguntar dentro do código 
+
+do while executa uma vez antes de verificar a condição -> até que uma condição aconteça
+while so executa se for verdadeiro -> enquanto for verdadeiro até tornar execucao falsa 
+for -> execucao delimitada || inicialização, condição, passo -> PRIMEIRO PRINTA DEPOIS INCREMENTA 
+
