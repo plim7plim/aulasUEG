@@ -24,7 +24,7 @@ function essaAQ2(){
         for (let i = 2; i < n; i++){
             if (n % i === 0){
                 ehPrimo = false;
-                break;
+                break; //se qualquer numero menor que N dividir ele já pode considerar que é falso. 
             }
         }
     }
@@ -50,7 +50,7 @@ function essaAQ3(){
         }
 
     }
-    console.log(somar === n ? "é um número perfeito" : "Não é perfeito");
+    console.log(somar === n ? "é um número perfeito" : "Não é perfeito"); //eu usei ternário hehehehehheheheubfnbi bijFBP 
 
 }
 
@@ -61,8 +61,8 @@ function essaAQ4(){
     let n = Number(prompt("Escolha um numero "));   
     let resultado = 1;
 
-    for (let i = n; i > 0; i--){
-        resultado *= i;
+    for (let i = n; i > 0; i--){ //pra uma variavel I que começa em N enquanto I for maior que 0 subtraia 1 de I 
+        resultado *= i; // 5*4*3*2*1 por ex
     }
 
     console.log(resultado);

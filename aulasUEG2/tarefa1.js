@@ -1,7 +1,6 @@
 const prompt = require("prompt-sync")();
 
 
-
 function fazIsso (){
     let n = Number(prompt("Escolha um numero "));
     for (let i = 1; i <= n;i++){
