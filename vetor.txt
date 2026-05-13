@@ -1,0 +1,3 @@
+varivaeis precisam ter nome -> consequentemente uma área de memória 
+
+vetores/arrays -> pega espaço, divide e armazena valores -> indices começa em 0
