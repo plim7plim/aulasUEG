@@ -23,7 +23,7 @@ console.log(array2);
 
 const arrayRoberto = ["R", "o", "b", "e", "r", "t", "o"];
 
-console.log(arrayRoberto); */
+console.log(arrayRoberto); 
 
 //===================================================================
 
@@ -42,3 +42,23 @@ for(const elementinho of array2){
     str2 += elementinho + " | ";
 }
 console.log(str2) // de fora ele so mostra o print final 
+
+
+
+console.log("*")
+console.log("**")
+console.log("***")
+console.log("****")
+console.log("*****") */
+
+//===================================================================
+let linhas= 0
+for(let i=0; i<6; i++){
+    linhas++;
+    if(linhas ==1 || linhas == 6){
+            console.log("    ***   ")
+    }else if(linhas ==2 || linhas == 5){
+          console.log("  *     *  ")
+    }else(console.log(" **     **  "))
+}
+console.log(linhas)
