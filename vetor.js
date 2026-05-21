@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 
-/*
+
 let vetor = [10,9,8,7,6] 
 const array2= ["Maca", "Pera", "Banan", "Uva"]
 
@@ -49,7 +49,7 @@ console.log("*")
 console.log("**")
 console.log("***")
 console.log("****")
-console.log("*****") */
+console.log("*****") 
 
 //===================================================================
 let linhas= 0

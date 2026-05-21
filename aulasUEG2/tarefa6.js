@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")();
 
-/*
+
 let n1 = Number(prompt("Digite um número: "));
 let n2 = Number(prompt("Digite um número: "));
 function calcularMDC(n1, n2) {
@@ -127,7 +127,7 @@ while (numero <= 9) {
     console.log("----------------");
 
     numero++; // numero ++ pra passar pra próx assim que chegar a 9, assim quando 1 chegar a 1+9 passa pra 2+1 
-}*/
+}
 //##################################
 for (let numero = 1; numero <= 1000; numero++) { //pra uma variavel q começa em 1 enquanto for menor q 100 ++
 
