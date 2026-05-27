@@ -47,7 +47,7 @@ for (let i = 0; i < vetor.length; i++) {
 
 console.log(media)
 console.log("menor = " + menor);
-console.log("maior = " + maior); */
+console.log("maior = " + maior);
 
 for (let i = 1; i <= 9; i++) {
 
@@ -76,4 +76,6 @@ for (let i = 3; i<501; i ++){
     if (i%3 ==0 ){
         console.log(i)
     }
-}
+} */
+
+//################################################
